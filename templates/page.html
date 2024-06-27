@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+  <div style="text-align: center; margin: 30px">
+    <div style="text-align: center" class="hero-left-column">
+      <img
+      src="/media/{{ page.header }}"
+      loading="lazy" alt="header" class="hero__logo1">
+    </div>
+
+  </div>
+  <hr>
+  <h1 style="text-align: center">
+  {{ page.title }}
+  </h1>
+
+  <br>
+  <div style="margin: 65px">
+  <p4>
+      {{ page.content }}
+  </p4>
+    <br>
+  <h5>Created by {{ page.created_by.first_name }} {{ page.created_by.last_name }}</h5>
+  </div>
+    
+
+{% endblock %}
